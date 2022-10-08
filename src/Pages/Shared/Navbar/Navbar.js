@@ -7,8 +7,6 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 
-
-
 let activeStyle = {
     textDecoration: "underline",
     color: '#7c3aed'
@@ -283,7 +281,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            {/* <ToastContainer></ToastContainer> */}
+            <ToastContainer></ToastContainer>
         </>
 
     );
