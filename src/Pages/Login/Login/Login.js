@@ -10,7 +10,6 @@ import OtherAccount from '../OtherAccountLogIn/OtherAccount';
 
 const Login = () => {
 
-
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
@@ -47,9 +46,7 @@ const Login = () => {
         toast("Successfully Login")
     }
 
-    // const navigateRegister = event => {
-    //     navigate('/register');
-    // }
+
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
