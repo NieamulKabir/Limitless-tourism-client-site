@@ -10,11 +10,9 @@ const Register = () => {
     const [agree, setAgree] = useState(false);
     const [
         createUserWithEmailAndPassword,
-        user,
         loading,
-        error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [updateProfile, updating] = useUpdateProfile(auth);
     const navigate = useNavigate();
 
     if (loading || updating) {
