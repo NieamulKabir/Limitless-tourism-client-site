@@ -42,7 +42,6 @@ const CoreValue = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
