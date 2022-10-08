@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 35vmin;
+  height: 40vmin;
   pointer-events: none;
 }
 
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,15 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.images img {
-  min-width: 100px;
-  height: auto;
-  margin: 5px;
 }
