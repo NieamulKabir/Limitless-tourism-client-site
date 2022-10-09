@@ -4,8 +4,7 @@ import { NavLink, useParams } from 'react-router-dom';
 const PackageDetails = () => {
     let { packageId } = useParams();
     const [packageDetails, setPackageDetails] = useState({});
-    // const [singlePackageDetails, setSinglePackageDetails] = useState({});
-
+ 
     useEffect(() => {
         fetch(`http://localhost:5000/package/${packageId}`)
             .then(res => res.json())

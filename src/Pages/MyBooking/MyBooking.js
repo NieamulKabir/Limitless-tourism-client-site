@@ -50,10 +50,10 @@ const MyBooking = () => {
                             <h2 className="px-5 pt-5 text-black font-semibold">Email : {booking?.useremail}</h2>
                             <h2 className="px-5 pt-5 text-black text-xl">Phone : {booking?.userphone}</h2>
                             <h2 className="px-5 pt-5 text-black text-xl">Address : {booking?.useraddress}</h2>
-                            <h2 className="px-5 pt-5 text-black text-xl">Status : {booking?.status === "pending" ? <span className="py-1 px-3 text-gray-900 bg-purple-300 rounded">PENDING</span> : <span className="py-2 px-3 bg-green-500 text-white rounded">CONFIRMED</span>} </h2>
+                            <h2 className="px-5 pt-5 text-black text-xl">Status : {booking?.status === "pending" ? <span className="py-2 px-3 text-white bg-purple-500 rounded">PENDING</span> : <span className="py-2 px-3 bg-green-500 text-white rounded">CONFIRMED</span>} </h2>
                             <br />
                             {
-                                (booking?.status === "pending" ? <button onClick={() => handleDeleteBooking(booking?._id)} className="px-5 py-3 mt-10 mb-8 text-white bg-red-600 custom-bg-font rounded hover:bg-red-800 transition duration-300 ml-2">Cancel Booking</button> : null)
+                                (booking?.status === "pending" ? <button onClick={() => handleDeleteBooking(booking?._id)} className="px-5 py-2 mt-4 text-white bg-red-600 rounded hover:bg-red-800 transition duration-300 ml-2">Cancel Booking <i className="fa-solid fa-trash"></i></button> : null)
                             }
                         </div>
                     </div>)
