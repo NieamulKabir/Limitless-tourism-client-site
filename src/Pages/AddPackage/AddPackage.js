@@ -23,50 +23,50 @@ const AddPackage = () => {
                 <form className='bg-green-100 mx-auto w-11/12 pt-10 pb-5 rounded-3xl' onSubmit={handleSubmit(onSubmit)}>
 
                     <label className="label ">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Destination Place:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Destination Place:</span>
                     </label>
                     <input className='w-[80%] pl-2 py-[5px] border-solid border-2 border-indigo-600 rounded-xl' {...register("place", { required: true, maxLength: 20 })} />
 
 
                     <label className="label ">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Tour Duration:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Tour Duration:</span>
                     </label>
                     <input className='w-[80%]  pl-2 py-[5px] border-solid border-2 border-indigo-600 rounded-xl' {...register("duration", { min: 1, max: 7 })} />
 
 
                     <label className="label ">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Number of People:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Number of People:</span>
                     </label>
                     <input className='w-[80%]  pl-2 py-[5px] border-solid border-2 border-indigo-600 rounded-xl' {...register("people", { min: 1, max: 7 })} />
 
 
                     <label className="label">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Ratings</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Ratings</span>
                     </label>
                     <input className='w-[80%] pl-2 py-[5px]  border-solid border-2 border-indigo-600 rounded-xl' type="number" step=".1" {...register("ratings", { required: true })} />
 
 
 
                     <label className="label">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Image URL:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Image URL:</span>
                     </label>
                     <input className='w-[80%] pl-2 py-[5px]  border-solid border-2 border-indigo-600 rounded-xl' required {...register("imgURL", { required: true })} />
 
 
                     <label className="label">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Short Description:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Short Description:</span>
                     </label>
                     <textarea className='w-[80%] pl-2  border-solid border-2 border-indigo-600 rounded-xl' required {...register("title", { required: true })} />
 
 
                     <label className="label">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Description:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Description:</span>
                     </label>
                     <textarea className='w-[80%] pl-2 border-solid border-2 border-indigo-600 rounded-xl' required {...register("description", { required: true })} />
 
 
                     <label className="label">
-                        <span className="label-text ml-14 font-semibold text-gray-800 text">Price:</span>
+                        <span className="label-text ml-14 font-semibold text-gray-800">Price:</span>
                     </label>
                     <input className='w-[80%] pl-2 py-[5px] border-solid border-2 border-indigo-600 rounded-xl' required type="number" {...register("price", { required: true })} />
 
