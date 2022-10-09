@@ -12,7 +12,7 @@ const Booking = () => {
     const { place } = booking;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/package/${bookingId}`)
+        fetch(`https://limitless-tourism.onrender.com/package/${bookingId}`)
             .then(res => res.json())
             .then(data => setBooking(data))
     }, [bookingId])
@@ -41,7 +41,7 @@ const Booking = () => {
 
         // SEND TO SERVER
         console.log(placeBooking);
-        axios.post('http://localhost:5000/bookings', placeBooking)
+        axios.post('https://limitless-tourism.onrender.com/bookings', placeBooking)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Booked successfully, Now visit My Bookings to view your bookings');
@@ -83,8 +83,8 @@ const Booking = () => {
                         <span className="label-text ml-14 font-semibold text-gray-800">Address:</span>
                     </label>
                     <textarea className='w-[80%] pl-2 py-[5px]  border-solid border-2 border-indigo-600 rounded-xl' type="textarea" name="useraddress" onBlur={handleOnBlur} />
-<br />
-                    <input  className="px-10 py-3 mt-6 text-xl font-semibold rounded-2xl bg-violet-700 text-white submit-btn" type="submit" defaultValue="CONFIRM BOOKING" />
+                    <br />
+                    <input className="px-10 py-3 mt-6 text-xl font-semibold rounded-2xl bg-violet-700 text-white submit-btn" type="submit" defaultValue="CONFIRM BOOKING" />
                 </form>
             </div>
 

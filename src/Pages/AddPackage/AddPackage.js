@@ -7,7 +7,7 @@ const AddPackage = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/package `;
+        const url = `https://limitless-tourism.onrender.com/package `;
         axios.post(url, data)
             .then(res => {
                 if (res.data.insertedId) {

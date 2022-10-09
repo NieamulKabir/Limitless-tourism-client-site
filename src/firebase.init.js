@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA0DY1ERLF9w24rRsGd8OhIV3gHtq_IRN0",
-  authDomain: "limitless-tourism.firebaseapp.com",
-  projectId: "limitless-tourism",
-  storageBucket: "limitless-tourism.appspot.com",
-  messagingSenderId: "84094610734",
-  appId: "1:84094610734:web:f7b54a9f5ea1fa1a7c5ebf"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

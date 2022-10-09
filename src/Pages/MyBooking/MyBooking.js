@@ -7,7 +7,7 @@ const MyBooking = () => {
 
     const [myBookings, setMyBookings] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings`)
+        fetch(`https://limitless-tourism.onrender.com/bookings`)
             .then(res => res.json())
             .then(data => setMyBookings(data))
 
@@ -16,7 +16,7 @@ const MyBooking = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure to cancel this Booking?');
         if (proceed) {
-            const url = `http://localhost:5000/bookings/${id}`;
+            const url = `https://limitless-tourism.onrender.com/bookings/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
