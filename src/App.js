@@ -15,6 +15,7 @@ import AddPackage from './Pages/AddPackage/AddPackage';
 import Booking from './Pages/Booking/Booking';
 import MyBooking from './Pages/MyBooking/MyBooking';
 import ManageAllBooking from './Pages/ManageAllBooking/ManageAllBooking';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth'
 
 
 function App() {
@@ -25,12 +26,39 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+
         <Route path="/packages" element={<Packages />} />
-        <Route path="/packageDetails/:packageId" element={<PackageDetails />} />
-        <Route path="/addPackage" element={<AddPackage />} />
-        <Route path="/booking/:bookingId" element={<Booking />} />
-        <Route path="/myBooking" element={<MyBooking />} />
-        <Route path="/manageBookings" element={<ManageAllBooking />} />
+
+        <Route path="/packageDetails/:packageId" element={
+          <RequireAuth>
+            <PackageDetails />
+          </RequireAuth>
+        } />
+
+        <Route path="/addPackage" element={
+          <RequireAuth>
+            <AddPackage />
+          </RequireAuth>
+        } />
+
+        <Route path="/booking/:bookingId" element={
+          <RequireAuth>
+            <Booking />
+          </RequireAuth>
+        } />
+
+        <Route path="/myBooking" element={
+          <RequireAuth>
+            <MyBooking />
+          </RequireAuth>
+        } />
+
+
+        <Route path="/manageBookings" element={
+          <RequireAuth>
+            <ManageAllBooking />
+          </RequireAuth>
+        } />
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login></Login>}></Route>
