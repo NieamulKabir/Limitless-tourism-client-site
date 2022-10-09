@@ -24,7 +24,7 @@ const MyBooking = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount) {
-                        alert('Service Deleted successfully')
+                        alert('Package Deleted successfully')
                         const remaining = myBookings.filter(booking => booking._id !== id);
                         setMyBookings(remaining);
                     }

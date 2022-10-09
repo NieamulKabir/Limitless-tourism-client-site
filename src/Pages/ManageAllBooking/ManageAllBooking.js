@@ -22,7 +22,7 @@ const ManageAllBooking = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount) {
-                        alert('Service Deleted successfully')
+                        alert('Package Deleted successfully')
                         const remaining = myBookings.filter(booking => booking._id !== id);
                         setMyBookings(remaining);
                     }
@@ -44,7 +44,7 @@ const ManageAllBooking = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('Service Updated Successfully.')
+                    alert('Package Updated Successfully.')
                     window.location.reload();
                 }
             })
