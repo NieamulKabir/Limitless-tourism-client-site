@@ -176,6 +176,11 @@ const Navbar = () => {
                                     PACKAGES
                                 </Link>
                             </li>
+                            <li className="">
+                                <Link className="btn hover:bg-slate-300 dark:hover:bg-slate-500 btn-ghost rounded-btn mx-3" to="/myBooking">
+                                    MY-BOOKING
+                                </Link>
+                            </li>
 
                             <li className="mt-[] pt-0">
                                 <h1 className="btn btn-ghost  text-gray-800 mr-0 mt[-10px] pr-0">
