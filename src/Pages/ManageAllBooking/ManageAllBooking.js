@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const ManageAllBooking = () => {
 
@@ -22,7 +24,7 @@ const ManageAllBooking = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount) {
-                        alert('Package Deleted successfully')
+                        toast('Package Deleted successfully')
                         const remaining = myBookings.filter(booking => booking._id !== id);
                         setMyBookings(remaining);
                     }
@@ -52,15 +54,15 @@ const ManageAllBooking = () => {
 
     return (
         <div className='font-serif bg-green-50'>
+            <PageTitle title="Manage_All_Booking"></PageTitle>
             <h1 className="pt-10 pb-2 text-center text-3xl font-bold text-violet-600">Admin Can Manage All Bookings HERE! </h1>
             <div className="w-11/12 xl:px-16 2xl:px-20 py-5 lg:py-10 text-white grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto">
                 {
                     myBookings.map(booking =>
-                        <div
-                            key={booking._id}
-                        >
+                        <div data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500" key={booking._id}>
                             <div className="transform bg-green-200 to-hover hover:shadow-xl  text-center py-10 transition duration-300 rounded-box w-full mx-auto">
-
                                 <h1 className="px-5 pt-5 text-2xl font-bold text-black">Tour Location : <span className="text-violet-600">{booking.destinationPlace}</span></h1>
                                 <h1 className="px-5 pt-5 text-xl font-bold text-black">Client : <span className="text-violet-600">{booking.fullname}</span></h1>
                                 <h2 className="px-5 pt-5 text-black">Order ID : <span className="text-violet-600">{booking._id}</span> </h2>
