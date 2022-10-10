@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.1.2",
     "cra-template-cats": "1.1.4",
     "daisyui": "^2.31.0",
