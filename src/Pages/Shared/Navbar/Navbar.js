@@ -6,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
+import PageTitle from '../PageTitle/PageTitle';
 
 let activeStyle = {
     textDecoration: "underline",
@@ -24,19 +25,25 @@ const Navbar = () => {
 
     return (
         <>
+            <PageTitle title="Home"></PageTitle>
             <nav className="sticky top-0 w-full z-50 text-gray-800">
                 <div className='flex justify-between px-2 md:px-12  bg-gray-500 text-white items-center'>
                     <div className='text-start text-xs md:text-base'>
-                        <h1>We're here to provide 24/7 at your service</h1>
+                        <h1 data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">We're here to provide 24/7 at your service</h1>
                     </div>
-                    <div className='md:flex py-2 '>
+                    <div data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="500"
+                        data-aos-duration="500" className='md:flex py-2 '>
                         <h1 className='md:mr-3 text-end text-xs  md:text-base'><i className="fa-solid fa-phone mr-[3px]"></i>01517828832</h1>
                         <h1 className='text-xs text-end  md:text-base'><i className="fa-regular fa-envelope mr-[3px]"></i>limitless@gmail.com</h1>
                     </div>
                 </div>
                 <div className="navbar bg-[#a2f3c0]">
                     <div className="flex-1 md:pl-5 mx-2">
-                        <Link href="/">
+                        <Link to="/">
                             <div className="relative top-[]">
                                 <p className='font-mono font-extrabold text-base text-violet-600  md:text-2xl'><i className="fa-solid fa-earth-asia"></i> Limitless-Tourism</p>
                             </div>
