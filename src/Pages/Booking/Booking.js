@@ -50,7 +50,7 @@ const Booking = () => {
     };
 
     return (
-        <div>
+        <div className='font-serif'>
             <PageTitle title="Booking"></PageTitle>
             <h1 className="pt-10 pb-6 text-center text-3xl font-bold text-violet-700">Confirm Your Booking!!</h1>
             <div className="text-gray-800 pb-10 bg-green-300 pt-10 rounded-box w-11/12 md:w-5/6 lg:w-3/5 mx-auto" >
