@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const PackageDetails = () => {
     let { packageId } = useParams();
@@ -14,9 +15,10 @@ const PackageDetails = () => {
 
     return (
         <div className="font-serif">
+            <PageTitle title="Package-Details"></PageTitle>
             <div className='w-9/12 mx-auto my-10'>
-                <div className="card lg:card-side shadow-xl bg-green-50">
-                    <figure><img className='mx-6 rounded-3xl' src={packageDetails?.imgURL} alt="Album" /></figure>
+                <div data-aos="flip-up" className=" card lg:card-side shadow-xl bg-green-50">
+                    <figure><img className='mx-6 rounded-2xl' src={packageDetails?.imgURL} alt="Album" /></figure>
                     <div className="card-body">
                         <h2 className="text-center text-4xl font-bold text-violet-600">{packageDetails?.place} </h2>
                         <h2 className="text-sm md:text-lg text-justify"> {packageDetails?.description} </h2>

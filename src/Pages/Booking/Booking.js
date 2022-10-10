@@ -3,6 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import axios from 'axios';
+import PageTitle from '../Shared/PageTitle/PageTitle';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Booking = () => {
     const [user] = useAuthState(auth);
@@ -30,27 +33,25 @@ const Booking = () => {
     }
     const handleBookingSubmit = e => {
         e.preventDefault();
-        console.log('confirm booking clicked');
-
         // COLLECT DATA
         const placeBooking = {
             ...bookingInfo,
             destinationPlace: place,
 
         }
-
         // SEND TO SERVER
         console.log(placeBooking);
         axios.post('https://limitless-tourism.onrender.com/bookings', placeBooking)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('Booked successfully, Now visit My Bookings to view your bookings');
+                    toast('Booked successfully, Now visit My Bookings to view your bookings');
                 }
             })
     };
 
     return (
         <div>
+            <PageTitle title="Booking"></PageTitle>
             <h1 className="pt-10 pb-6 text-center text-3xl font-bold text-violet-700">Confirm Your Booking!!</h1>
             <div className="text-gray-800 pb-10 bg-green-300 pt-10 rounded-box w-11/12 md:w-5/6 lg:w-3/5 mx-auto" >
                 <form className=" add-service-form w-5/6 mx-auto " onSubmit={handleBookingSubmit}>

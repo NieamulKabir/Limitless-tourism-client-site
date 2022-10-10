@@ -16,6 +16,7 @@ import Booking from './Pages/Booking/Booking';
 import MyBooking from './Pages/MyBooking/MyBooking';
 import ManageAllBooking from './Pages/ManageAllBooking/ManageAllBooking';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth'
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -68,7 +69,9 @@ function App() {
       </Routes>
       <Footer></Footer>
 
-
+      <ToastContainer
+        className='mx-auto'
+      ></ToastContainer>
     </div>
   );
 }
