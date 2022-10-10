@@ -1,14 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     return (
         <div className='bg-green-50 font-serif'>
             <div className='md:flex row w-11/12 mx-auto items-center py-20 '>
-                <div className='text-start  basis-2/4'>
+                <div  data-aos="fade-right" className='text-start  basis-2/4'>
                     <h1 className='text-4xl lg:text-5xl  font-bold'>WellCome To <br /><span className='text-violet-600'>Limitless-Tourism</span></h1>
                     <h1 className='text-3xl lg:text-4xl py-6'> <span className='text-violet-600'>Explore</span> the world & <br /> become your own tour guide</h1>
                     <p className='pb-6'>Explore the country’s first and leading online travel aggregator.</p>
-                    <button className='bg-violet-500 px-4 py-2 text-white font-medium rounded-lg hover:bg-green-300 hover:text-black mb-4'>Explore Packages <i className="fa-solid fa-arrow-right"></i></button>
+                    <button className='bg-violet-500 px-4 py-2 text-white font-medium rounded-lg hover:bg-green-300 hover:text-black mb-4'>
+                        <Link to="/packages">Explore Packages</Link> <i className="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div className='basis-2/4'>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Loading from '../../../Loading/Loading';
 
 const HomePackages = () => {
     const [packages, setPackages] = useState([])
@@ -9,17 +10,24 @@ const HomePackages = () => {
             .then(data => setPackages(data))
     }, [])
 
+    if (packages.length === 0) {
+        return <div className='pt-16'>
+            <Loading ></Loading>
+        </div>
+    }
+
+
     return (
         <div className="bg-green-50 text-white font-serif">
-            <h1 className=" pt-10 text-center text-4xl font-bold text-violet-600">Our Limitless-Tourism Packages</h1>
-            <p className="text-gray-400 pt-5">Express tour packages includes these destination, for details please click each service</p>
-            <div className="w-5/6 xl:px-12  py-5 lg:py-20 text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto">
+            <h1 className=" pt-10 text-center text-4xl font-bold text-violet-600 underline decoration-violet-700">Our Limitless-Tourism Packages</h1>
+            <p className="text-gray-400 pt-5">Our tour packages includes these destination, for details please click each service</p>
+            <div data-aos="zoom-in-up"  className="w-5/6 xl:px-12  py-5 lg:py-20 text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto">
                 {
                     packages.slice(0, 6).map((service, index) =>
                         <div key={index}>
                             <div className="transform hover:-translate-y-3 to-hover hover:shadow-xl bg-green-200 text-center secondary-bg transition duration-300 rounded-box w-full mx-auto">
 
-                                <img className="mx-auto w-full rounded-lg" src={service.imgURL} alt="" />
+                                <img data-aos="zoom-in" className="mx-auto w-full rounded-lg" src={service.imgURL} alt="" />
                                 <h1 className="px-5 pt-5 text-2xl font-bold text-violet-600">{service.place}</h1>
                                 <h2 className="px-5 pt-5 text-black">{service.title}</h2>
                                 <h2 className="text-black pt-5 w-5/6 lg:w-2/5 mx-auto pb-2 text-sm">
