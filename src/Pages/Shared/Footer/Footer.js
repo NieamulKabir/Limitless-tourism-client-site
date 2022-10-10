@@ -6,7 +6,7 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
         <div className='font-serif'>
-            <footer className="footer footer-center p-10 bg-green-100 text-base-content rounded mt-10">
+            <footer className="footer footer-center p-10 bg-green-100 text-base-content rounded pt-10">
                 <div className="grid grid-flow-col gap-4">
                     <Link to='/home' className="link link-hover text-violet-600 font-semibold">Home</Link>
                     <Link to='/packages' className="link link-hover text-violet-600 font-semibold">Packages</Link>

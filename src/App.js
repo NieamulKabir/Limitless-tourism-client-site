@@ -17,6 +17,7 @@ import MyBooking from './Pages/MyBooking/MyBooking';
 import ManageAllBooking from './Pages/ManageAllBooking/ManageAllBooking';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth'
 import { ToastContainer } from 'react-toastify';
+import ScrollToTop from "react-scroll-to-top";
 
 
 function App() {
@@ -72,6 +73,10 @@ function App() {
       <ToastContainer
         className='mx-auto'
       ></ToastContainer>
+
+
+      <ScrollToTop className='mx-auto pl-1 font-bold !important' smooth color='white' top='40' width='30' style={{backgroundColor:"#6d28d9",fontWeight: "bold"}}/>
+
     </div>
   );
 }

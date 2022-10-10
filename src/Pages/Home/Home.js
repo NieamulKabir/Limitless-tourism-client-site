@@ -12,7 +12,7 @@ const Home = () => {
             <HeroSection></HeroSection>
             <CoreValue></CoreValue>
             <HomePackages></HomePackages>
-            <Events></Events> 
+            <Events></Events> <br /> <br />
         </div>
     );
 };
