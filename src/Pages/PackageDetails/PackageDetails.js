@@ -27,7 +27,7 @@ const PackageDetails = () => {
                         <h2 className="">Ratings : {packageDetails?.ratings}<i className="fas fa-star text-violet-500"></i></h2>
                         <h2 className="text-gray-800  text-xl font-bold">Package Price: <span className="text-violet-500 text-2xl font-bold"> {packageDetails?.price}</span> BDT </h2>
                         <div className="card-actions justify-center">
-                            <NavLink to={`/booking/${packageDetails?._id}`}><button className="px-10 py-4 bg-gray-700 rounded-3xl hover:bg-violet-600 text-white transition duration-300 ">Book This Service</button></NavLink>
+                            <NavLink to={`/booking/${packageDetails?._id}`}><button className="px-10 py-4 bg-gray-700 rounded-3xl hover:bg-violet-600 text-white transition duration-300 ">Book This Package</button></NavLink>
                         </div>
                     </div>
                 </div>

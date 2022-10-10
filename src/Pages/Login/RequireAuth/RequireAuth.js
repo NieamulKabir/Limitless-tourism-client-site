@@ -6,8 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import Loading from '../../../Loading/Loading';
 
+
 const RequireAuth = ({ children }) => {
-    const [sendEmailVerification, sending, error] = useSendEmailVerification(
+    const [sendEmailVerification] = useSendEmailVerification(
         auth
     );
     const [user, loading] = useAuthState(auth);
@@ -22,7 +23,8 @@ const RequireAuth = ({ children }) => {
     if (!user.emailVerified) {
         return <div className='my-10 font-serif'>
 
-            <div className="card w-96 bg-orange-100 mx-auto shadow-xl">
+            <div className="card w-96 bg-green-100 mx-auto shadow-xl">
+              
                 <div className="card-body mx-auto text-center">
                     <h2 className="text-2xl font-bold text-violet-600">Email Verification</h2>
                     <p className='text-red-500'>Your Email is not verified</p>

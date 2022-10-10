@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../../Loading/Loading';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 // import PageTitle from '../../Shared/PageTitle/PageTitle';
 import OtherAccount from '../OtherAccountLogIn/OtherAccount';
 
@@ -35,7 +36,7 @@ const Register = () => {
 
     return (
         <div className='mb-20 font-serif'>
-            {/* <PageTitle title="Register"></PageTitle> */}
+            <PageTitle title="Register"></PageTitle>
             <h2 className="text-3xl py-10 font-bold text-violet-500" >Please Register</h2>
 
             <div className='md:flex md:px-6 justify-center items-center mx-auto'>
