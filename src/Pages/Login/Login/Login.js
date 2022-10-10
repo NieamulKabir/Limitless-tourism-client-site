@@ -6,6 +6,7 @@ import Loading from '../../../Loading/Loading';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OtherAccount from '../OtherAccountLogIn/OtherAccount';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 // import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Login = () => {
@@ -62,8 +63,8 @@ const Login = () => {
 
     return (
         <div className=' py-5 mb-20 font-serif'>
-            {/* <PageTitle title="Log In"></PageTitle>
-            <PageTitle title="Log In"></PageTitle> */}
+            <PageTitle title="Log In"></PageTitle>
+            
             <h2 className="text-3xl py-10 font-bold text-violet-500">Please Login</h2>
             <div className='md:flex  md:px-6 w-11/12 justify-center items-center mx-auto'>
                 <div className='mx-auto md:mx-0 md:w-[45%] lg:w-1/2'>
